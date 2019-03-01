@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="beers"
+  xmlns="beers"
+  elementFormDefault="qualified">
+
+  <xs:element name='beers'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name='beer' type='beerType' minOccurs='0'
+          maxOccurs='unbounded'/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="beerType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="al" type="xs:boolean"/>
+      <xs:element name="manufacturer" type="xs:string"/>
+
+      <xs:element name="ingredients">
+        <xs:complexType>
+          <xs:choice maxOccurs="unbounded">
+            <xs:element name="ingredient" type="xs:string"/>
+          </xs:choice>
+        </xs:complexType>
+
+      </xs:element>
+      <xs:element name="chars">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="alcFraction">
+              <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                  <xs:minInclusive value="0.0"/>
+                  <xs:maxInclusive value="15.0"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="transparency">
+              <xs:simpleType>
+                <xs:restriction base="xs:decimal">
+                  <xs:fractionDigits value="100"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="filtered" type="xs:boolean"/>
+            <xs:element name="nutritions">
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="0"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="spillMethod">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="vol">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:decimal">
+                        <xs:minExclusive value="0"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tankMaterial" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name='beerNo' type='xs:integer'/>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="beerXSLT.xsl"?>
+
+<beers xmlns="beers"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="beerXSD.xsd">
+    <beer beerNo="0">
+        <name>golden ale</name>
+        <type>ale</type>
+        <al>true</al>
+        <manufacturer>varvar brew</manufacturer>
+        <ingredients>
+            <ingredient>water</ingredient>
+            <ingredient>hop</ingredient>
+            <ingredient>malt</ingredient>
+        </ingredients>
+        <chars>
+            <alcFraction>6.8</alcFraction>
+            <transparency>21</transparency>
+            <filtered>false</filtered>
+            <nutritions>20</nutritions>
+            <spillMethod>
+                <vol>0.33</vol>
+                <tankMaterial>glass</tankMaterial>
+            </spillMethod>
+        </chars>
+    </beer>
+    <beer beerNo="1">
+        <name>milk stout</name>
+        <type>stout</type>
+        <al>true</al>
+        <manufacturer>varvar brew</manufacturer>
+        <ingredients>
+            <ingredient>water</ingredient>
+            <ingredient>hop</ingredient>
+            <ingredient>malt</ingredient>
+            <ingredient>lactose</ingredient>
+        </ingredients>
+        <chars>
+            <alcFraction>4.7</alcFraction>
+            <transparency>18</transparency>
+            <filtered>false</filtered>
+            <nutritions>50</nutritions>
+            <spillMethod>
+                <vol>0.33</vol>
+                <tankMaterial>glass</tankMaterial>
+            </spillMethod>
+        </chars>
+    </beer>
+    <beer beerNo="2">
+        <name>pumpeii</name>
+        <type>pumpkin porter</type>
+        <al>true</al>
+        <manufacturer>varvar brew</manufacturer>
+        <ingredients>
+            <ingredient>water</ingredient>
+            <ingredient>hop</ingredient>
+            <ingredient>malt</ingredient>
+            <ingredient>pumpkin</ingredient>
+        </ingredients>
+        <chars>
+            <alcFraction>5.5</alcFraction>
+            <transparency>12.8</transparency>
+            <filtered>false</filtered>
+            <nutritions>60</nutritions>
+            <spillMethod>
+                <vol>0.33</vol>
+                <tankMaterial>glass</tankMaterial>
+            </spillMethod>
+        </chars>
+    </beer>
+    <beer beerNo="3">
+        <name>stella artois</name>
+        <type>lager</type>
+        <al>false</al>
+        <manufacturer>stella artois</manufacturer>
+        <ingredients>
+            <ingredient>water</ingredient>
+            <ingredient>hop</ingredient>
+            <ingredient>malt</ingredient>
+        </ingredients>
+        <chars>
+            <alcFraction>0.0</alcFraction>
+            <transparency>5.0</transparency>
+            <filtered>true</filtered>
+            <nutritions>25</nutritions>
+            <spillMethod>
+                <vol>0.5</vol>
+                <tankMaterial>plastic</tankMaterial>
+            </spillMethod>
+        </chars>
+    </beer>
+</beers>
